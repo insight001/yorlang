@@ -17,7 +17,7 @@ const constants = require("./constants.js");
 const arg = process.argv[2];
 
 if (arg === "-v") {
-    console.log(packageJson.version);
+    console.log("Ori "+ packageJson.version);
 } else if (path.extname(arg) === constants.YL_EXT) { 
     const parser = new Parser(new Lexer(new InputStream(arg))); //arg is the filename
     new MainInterpreter(new Environment(), parser).interpreteProgram();
